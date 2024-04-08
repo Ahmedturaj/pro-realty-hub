@@ -33,12 +33,12 @@ const Navbar = () => {
 
             <div className="navbar-end">
                 {
-                    user ?
+                    user &&
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar mr-5">
                             <div className="w-10 rounded-full">
-                                <img alt={`picture of ${user.displayName}`} src={user.photoURL} title={user.displayName} />
+                                <img alt={`picture of ${user.displayName}`} src={user.photoURL?user.photoURL:'https://i.ibb.co/Y36ZBDD/blank-avatar-photo-place-holder-600nw-1095249842.jpg'} title={user.displayName} />
                             </div>
-                        </div> : ''
+                        </div> 
                 }
                 {
                     user ? <>
