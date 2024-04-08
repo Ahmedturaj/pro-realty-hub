@@ -4,6 +4,8 @@
  - [tailWind](https://tailwindcss.com/)
  - [DaisyUI](https://daisyui.com/)
  - [Swiper](https://swiperjs.com/)
+ - [reactHelmet](https://www.npmjs.com/package/react-helmet)
+ - [reactHookForm](https://react-hook-form.com/)
 
 # React + Vite
 
