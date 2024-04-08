@@ -6,6 +6,8 @@
  - [Swiper](https://swiperjs.com/)
  - [reactHelmet](https://www.npmjs.com/package/react-helmet)
  - [reactHookForm](https://react-hook-form.com/)
+ - [PropTypes](https://www.npmjs.com/package/prop-types)
+ - [firebase](https://firebase.google.com/)
 
 # React + Vite
 
