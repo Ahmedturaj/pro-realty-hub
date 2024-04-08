@@ -11,6 +11,7 @@ import Home from './pages/Home/Home';
 import UpdateProfile from './pages/UpdateProfile/UpdateProfile';
 import Contact from './pages/Contact/Contact';
 import AuthProvider from './Provider/AuthProvider/AuthProvider';
+import SignIn from './Authentication/SignIn/SignIn';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: '/contact',
         element: <Contact></Contact>
+      },
+      {
+        path: '/signIn',
+        element: <SignIn></SignIn>
       }
     ]
   },
