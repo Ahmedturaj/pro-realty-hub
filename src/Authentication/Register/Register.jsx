@@ -1,12 +1,14 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { updateProfile } from "firebase/auth";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
     const { signUp, setUser } = useContext(AuthContext);
+    const [showPassword, setShowPassword]=useState(false);
     const location = useLocation()
     const navigate = useNavigate()
     const handleSignUp = (e) => {
@@ -19,10 +21,16 @@ const Register = () => {
         if (password.length < 6) {
             toast.warning('You have to put 6 character In Your Password');
             return;
-        } else if (!/[A-z]/.test(password)) {
+        } else if (!/[A-Z]/.test(password)) {
             toast.warning('You have to use at least one Uppercase character In Your Password');
             return;
-        } else if (!/[0-9]/.test(password)) {
+        } 
+        else if (!/[a-z]/.test(password)) {
+            toast.warning('You have to use at least one lowercase character In Your Password');
+            return;
+        }
+        
+        else if (!/[0-9]/.test(password)) {
             toast.warning('You have to use at least one numeric character In Your Password');
             return;
         }
@@ -47,7 +55,7 @@ const Register = () => {
         e.target.reset();
     }
     return (
-        <div className="w-4/6 mx-auto border mt-14 border-gray-500 rounded-2xl bg-base-200">
+        <div className="w-4/6 mx-auto border mt-14 border-green-500 rounded-2xl bg-green-500">
             <div className="w-full">
                 <h1 className="text-center text-3xl font-bold py-2">Please SignUp</h1>
                 <div className="card shrink-0 w-full p-4 bg-base-100 ">
@@ -74,16 +82,18 @@ const Register = () => {
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" placeholder="password"
+                            <input type={showPassword?"text":"password" }placeholder="password"
                                 name="password"
                                 className="input input-bordered" required />
+                                <span onClick={()=>setShowPassword(!showPassword)} className="flex justify-end items-center relative bottom-8 mr-5 cursor-pointer  w-8 md:w-11 
+                               left-24 md:left-80 lg:left-[670px]">{showPassword?<FaEyeSlash/>:<FaEye></FaEye>}</span>
                             <label className="label">
                                 <span className="label-text">Confirm Password</span>
                             </label>
                             <input type="password" placeholder="Confirm password"
                                 name="confirmPassword" className="input input-bordered" required />
-                            <label className="label">
-                                <Link to={'/signIn'} className="label-text-alt link link-hover">Already Have an account</Link>
+                            <label className="label mt-10">
+                                <Link to={'/signIn'} className="label-text-alt link link-hover text-blue-600">Already Have an account</Link>
                             </label>
                         </div>
                         <div className="form-control mt-6">

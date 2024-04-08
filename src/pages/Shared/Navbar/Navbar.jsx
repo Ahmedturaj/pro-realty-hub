@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { MdRealEstateAgent } from "react-icons/md";
 import { AuthContext } from "../../../Provider/AuthProvider/AuthProvider";
 
 const Navbar = () => {
@@ -17,11 +18,12 @@ const Navbar = () => {
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 z-20">
                         {navLink}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl gap-0"><span className="text-2xl  text-[hsl(112,43%,55%)] p-0">P</span>ro<span className="text-2xl  text-[hsl(112,43%,55%)] p-0">R</span>ealty<span className="text-2xl  text-[hsl(112,43%,55%)] p-0">Hub</span></a>
+                <a className="btn btn-ghost md:text-xl text-xs gap-0"><span className="md:text-4xl text-xl text-[hsl(112,43%,55%)]"><MdRealEstateAgent /></span><span className="text-xl md:text-2xl  text-[hsl(112,43%,55%)] p-0">
+                    P</span>ro<span className="text-xl md:text-2xl  text-[hsl(112,43%,55%)] p-0">R</span>ealty<span className="text-base md:text-2xl  text-[hsl(112,43%,55%)] p-0">Hub</span></a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -31,12 +33,12 @@ const Navbar = () => {
 
             <div className="navbar-end">
                 {
-                    user?
-                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar mr-5">
-                        <div className="w-10 rounded-full">
-                            <img alt="Tailwind CSS Navbar component" src={user.photoURL} title={user.displayName} />
-                        </div>
-                        </div>:''
+                    user ?
+                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar mr-5">
+                            <div className="w-10 rounded-full">
+                                <img alt={`picture of ${user.displayName}`} src={user.photoURL} title={user.displayName} />
+                            </div>
+                        </div> : ''
                 }
                 {
                     user ? <>

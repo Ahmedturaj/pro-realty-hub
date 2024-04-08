@@ -2,10 +2,12 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
+import { FcGoogle } from "react-icons/fc";
+import { TfiGithub } from "react-icons/tfi";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const SignIn = () => {
-    const { logIn, setUser } = useContext(AuthContext);
+    const { logIn, setUser, googleLogIn, gitHubLogIn } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
     const handleLogIn = (e) => {
@@ -19,13 +21,38 @@ const SignIn = () => {
                 navigate(location?.state ? location.state : '/')
                 toast.success('logIn Successfully')
             })
-            .catch(error=>{
+            .catch(error => {
                 toast.warning(error.message)
             })
         e.target.reset();
     }
+    const handleGoogle = e => {
+        e.preventDefault();
+        googleLogIn()
+            .then((result) => {
+                setUser(result.user);
+                toast.success('You have Log In Via Google successfully')
+                navigate(location?.state ? location.state : '/')
+            })
+            .catch(error => {
+                toast.warning(error.message);
+            })
+    }
+
+    const handleGitHub = e => {
+        e.preventDefault()
+        gitHubLogIn()
+        .then((result)=>{
+            setUser(result.user);
+            toast.success('You have Log In Via GitHub successfully')
+            navigate(location?.state ? location.state : '/')
+        })
+        .catch(error => {
+            toast.warning(error.message);
+        })
+    }
     return (
-        <div className="w-4/6 mx-auto border mt-14 border-gray-500 rounded-2xl bg-base-200">
+        <div className="w-4/6 mx-auto border mt-14 border-green-500 rounded-2xl bg-green-500">
             <PageTitle title={'SingIn'}></PageTitle>
             <div className="w-full">
                 <h1 className="text-center text-3xl font-bold py-2">Please LogIn</h1>
@@ -42,15 +69,14 @@ const SignIn = () => {
                                 <span className="label-text">Password</span>
                             </label>
                             <input type="password" placeholder="password" name="password" className="input input-bordered" required />
-                            <label className="label">
-                                <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                            </label>
-                            <label className="label">
-                                <Link to={'/register'} className="label-text-alt link link-hover text-blue-600">Create Account</Link>
+                            <label className="label mt-10">
+                                <Link to={'/register'} className="label-text-alt link link-hover text-blue-600">Have no account ? Create Account please</Link>
                             </label>
                         </div>
-                        <div className="form-control mt-6">
+                        <div className="form-control mt-6 gap-5">
                             <button className="btn bg-green-500">SignIn</button>
+                            <button onClick={handleGoogle} className="btn bg-green-500 text-3xl"><FcGoogle></FcGoogle></button>
+                            <button onClick={handleGitHub} className="btn bg-green-500 text-3xl"><TfiGithub></TfiGithub></button>
                         </div>
                     </form>
                 </div>

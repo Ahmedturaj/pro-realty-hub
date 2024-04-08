@@ -9,7 +9,9 @@
  - [PropTypes](https://www.npmjs.com/package/prop-types)
  - [firebase](https://firebase.google.com/)
  - [reacttoast](https://www.npmjs.com/package/react-toastify)
- - [LibreBaskerville_font]()
+ - [LibreBaskerville_font](https://fonts.google.com/specimen/Libre+Baskerville)
+ - [Aos](https://www.npmjs.com/package/aos)
+ - [icons](https://react-icons.github.io/react-icons/)
 
 # React + Vite
 
