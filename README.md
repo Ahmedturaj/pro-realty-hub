@@ -8,6 +8,7 @@
  - [reactHookForm](https://react-hook-form.com/)
  - [PropTypes](https://www.npmjs.com/package/prop-types)
  - [firebase](https://firebase.google.com/)
+ - [reacttoast](https://www.npmjs.com/package/react-toastify)
 
 # React + Vite
 

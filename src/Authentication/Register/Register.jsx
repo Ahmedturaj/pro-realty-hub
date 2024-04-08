@@ -1,10 +1,14 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
-
+import { updateProfile } from "firebase/auth";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
-    const { signUp, setError, error } = useContext(AuthContext);
+    const { signUp, setUser } = useContext(AuthContext);
+    const location = useLocation()
+    const navigate = useNavigate()
     const handleSignUp = (e) => {
         e.preventDefault();
         const name = e.target.name.value;
@@ -13,21 +17,34 @@ const Register = () => {
         const password = e.target.password.value;
         const confirmPassword = e.target.confirmPassword.value;
         if (password.length < 6) {
-            setError('You have to put 6 character In Your Password');
+            toast.warning('You have to put 6 character In Your Password');
             return;
         } else if (!/[A-z]/.test(password)) {
-            setError('You have to use at least one Uppercase character In Your Password');
+            toast.warning('You have to use at least one Uppercase character In Your Password');
             return;
         } else if (!/[0-9]/.test(password)) {
-            setError('You have to use at least one numeric character In Your Password');
+            toast.warning('You have to use at least one numeric character In Your Password');
             return;
         }
         else if (password !== confirmPassword) {
-            setError('put the right password in confirm password');
+            toast.warning('put the right password in confirm password');
             return;
         }
-        signUp(name, photo, email, password);
-        setError('')
+        signUp(name, photo, email, password)
+            .then((result) => {
+                updateProfile(result.user, {
+                    displayName: name,
+                    photoURL: photo
+                })
+
+                setUser(result.user)
+                navigate(location?.state ? location.state : '/')
+                toast.success('Registered successfully.')
+            })
+            .catch(error => {
+                toast.warning(error.message)
+            })
+        e.target.reset();
     }
     return (
         <div className="w-4/6 mx-auto border mt-14 border-gray-500 rounded-2xl bg-base-200">
@@ -66,18 +83,16 @@ const Register = () => {
                             <input type="password" placeholder="Confirm password"
                                 name="confirmPassword" className="input input-bordered" required />
                             <label className="label">
-                                <Link to={'/logIn'} className="label-text-alt link link-hover">Already Have an account</Link>
-                            </label>
-                            <label className="label">
-                                <a className="label-text-alt link link-hover text-red-600">{error}</a>
+                                <Link to={'/signIn'} className="label-text-alt link link-hover">Already Have an account</Link>
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary">Login</button>
+                            <button className="btn bg-green-500">SignUp</button>
                         </div>
                     </form>
                 </div>
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

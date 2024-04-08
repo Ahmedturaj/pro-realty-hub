@@ -1,45 +1,28 @@
 import { createContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import auth from "../../Firebase/Firebase.config.init";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export const AuthContext = createContext(null)
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
-    const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
     const signUp = (name, photo, email, password) => {
         setLoading(true);
-        return (
-            createUserWithEmailAndPassword(auth, email, password)
-                .then((result) => {
-                    updateProfile(result.user, {
-                        displayName: name,
-                        photoURL: photo
-                    })
-                        
-                    setUser(result.user)
-                    console.log(result.user)
-                })
-                .catch(error => {
-                    console.log(error.message)
-                })
-        )
+        return createUserWithEmailAndPassword(auth, email, password)
+
     }
     const logIn = (email, password) => {
         setLoading(true)
-        return (
-            signInWithEmailAndPassword(auth, email, password)
-                .then((result) => {
-                    setUser(result.user)
-                    alert('logIn Successfully')
-                })
-        )
+        return signInWithEmailAndPassword(auth, email, password)
+        
     }
     const logOut = () => {
         setLoading(true)
         return (signOut(auth)
             .then(() => {
-                alert('Sign out done.');
+                toast.success('SignOut successfully.');
                 setUser(null);
             })
             .catch(error => {
@@ -52,7 +35,6 @@ const AuthProvider = ({ children }) => {
             setLoading(false);
             if (currentUser) {
                 setUser(currentUser);
-                console.log('yoo bro ok ', currentUser);
             }
         })
         return () => {
@@ -62,9 +44,9 @@ const AuthProvider = ({ children }) => {
     }, [])
     const authInfo = {
         user,
-        error,
+
         loading,
-        setError,
+        setUser,
         signUp,
         logOut,
         logIn,
@@ -74,6 +56,7 @@ const AuthProvider = ({ children }) => {
             <AuthContext.Provider value={authInfo}>
                 {children}
             </AuthContext.Provider>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

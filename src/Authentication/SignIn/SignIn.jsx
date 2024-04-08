@@ -1,10 +1,28 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import PageTitle from "../../components/PageTitle/PageTitle";
-
-
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const SignIn = () => {
-    const handleLogIn = e => {
+    const { logIn, setUser } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+    const handleLogIn = (e) => {
         e.preventDefault();
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        console.log(email, ' ', password)
+        logIn(email, password)
+            .then((result) => {
+                setUser(result.user)
+                navigate(location?.state ? location.state : '/')
+                toast.success('logIn Successfully')
+            })
+            .catch(error=>{
+                toast.warning(error.message)
+            })
+        e.target.reset();
     }
     return (
         <div className="w-4/6 mx-auto border mt-14 border-gray-500 rounded-2xl bg-base-200">
@@ -28,15 +46,16 @@ const SignIn = () => {
                                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                             </label>
                             <label className="label">
-                                <Link to={'/signUp'} className="label-text-alt link link-hover text-blue-600">Create Account</Link>
+                                <Link to={'/register'} className="label-text-alt link link-hover text-blue-600">Create Account</Link>
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary">Login</button>
+                            <button className="btn bg-green-500">SignIn</button>
                         </div>
                     </form>
                 </div>
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

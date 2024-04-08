@@ -12,6 +12,8 @@ import UpdateProfile from './pages/UpdateProfile/UpdateProfile';
 import Contact from './pages/Contact/Contact';
 import AuthProvider from './Provider/AuthProvider/AuthProvider';
 import SignIn from './Authentication/SignIn/SignIn';
+import Register from './Authentication/Register/Register';
+import PrivateRoutes from './components/PrivateRoutes/PrivateRoutes';
 
 const router = createBrowserRouter([
   {
@@ -24,7 +26,9 @@ const router = createBrowserRouter([
       },
       {
         path: '/update',
-        element: <UpdateProfile></UpdateProfile>
+        element: <PrivateRoutes>
+          <UpdateProfile></UpdateProfile>
+        </PrivateRoutes>
       },
       {
         path: '/contact',
@@ -33,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: '/signIn',
         element: <SignIn></SignIn>
+      },
+      {
+        path: '/register',
+        element: <Register></Register>
       }
     ]
   },
@@ -43,5 +51,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <AuthProvider>
       <RouterProvider router={router} />
     </AuthProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 )

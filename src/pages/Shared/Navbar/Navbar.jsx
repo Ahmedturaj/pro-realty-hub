@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../../Provider/AuthProvider/AuthProvider";
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
     const navLink = <>
         <li><NavLink to={'/'} className={({ isActive }) => isActive ? 'text-[hsl(112,43%,55%)] border border-[hsl(112,43%,55%)] font-bold  p-2 rounded-md text-xl' : 'text-black text-xl'}>Home</NavLink></li>
         <li><NavLink to={'/update'} className={({ isActive }) => isActive ? 'text-[hsl(112,43%,55%)] border border-[hsl(112,43%,55%)] font-bold  p-2 rounded-md text-xl' : 'text-black text-xl'}>Update Profile</NavLink></li>
@@ -27,24 +30,20 @@ const Navbar = () => {
             </div>
 
             <div className="navbar-end">
-                <div className="dropdown dropdown-end mr-5">
-                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                {
+                    user?
+                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar mr-5">
                         <div className="w-10 rounded-full">
-                            <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                            <img alt="Tailwind CSS Navbar component" src={user.photoURL} title={user.displayName} />
                         </div>
-                    </div>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        <li>
-                            <a className="justify-between">
-                                Profile
-                                <span className="badge">New</span>
-                            </a>
-                        </li>
-                        <li><a>Settings</a></li>
-                        <li><a>Logout</a></li>
-                    </ul>
-                </div>
-              <Link to={'/signIn'}>  <button className="btn text-base md:text-xl bg-[hsl(112,43%,55%)]">Login</button></Link>
+                        </div>:''
+                }
+                {
+                    user ? <>
+                        <button onClick={logOut} className="btn text-base md:text-xl bg-[hsl(112,43%,55%)]">LogOut</button>
+                    </> :
+                        <Link to={'/signIn'}>  <button className="btn text-base md:text-xl bg-[hsl(112,43%,55%)]">Login</button></Link>
+                }
             </div>
         </div>
     );
