@@ -1,19 +1,25 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
+import 'swiper/css/navigation';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
 
 const Banner = () => {
     return (
         <div className="relative w-full">
             <Swiper
-                cssMode={true}
+                spaceBetween={30}
+                centeredSlides={true}
+                autoplay={{
+                    delay: 2000,
+                    disableOnInteraction: false,
+                }}
+                pagination={{
+                    clickable: true,
+                }}
                 navigation={true}
-                pagination={true}
-                mousewheel={true}
-                keyboard={true}
-                modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+                modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper w-full mx-auto rounded-2xl"
             >
                 <SwiperSlide>
