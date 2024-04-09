@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "estate_title": "Modern Office Building",
+    "segment_name": "Office Building",
+    "description": "State-of-the-art office building with advanced facilities and amenities.",
+    "price": "5000000/month",
+    "status": "sale",
+    "area": "10000",
+    "location": "Downtown Business District",
+    "facilities": ["Conference Rooms", "Fitness Center"],
+    "image": "https://i.ibb.co/vc4nF24/01.jpg"
+  },
+  {
+    "id": 2,
+    "estate_title": "Prime Retail Space",
+    "segment_name": "Retail Space",
+    "description": "High-visibility retail space in a bustling commercial area.",
+    "price": "10000/month",
+    "status": "rent",
+    "area": "2500",
+    "location": "Shopping Mall",
+    "facilities": ["Storefront Windows", "Storage Area"],
+    "image": "https://i.ibb.co/KKKxMHN/02.jpg"
+  },
+  {
+    "id": 3,
+    "estate_title": "Large-scale Industrial Facility",
+    "segment_name": "Industrial Facility",
+    "description": "Industrial complex with manufacturing capabilities and ample storage space.",
+    "price": "12000000/month",
+    "status": "sale",
+    "area": "50000",
+    "location": "Industrial Zone",
+    "facilities": ["Production Areas", "Loading Bays"],
+    "image": "https://i.ibb.co/x7dXcXq/03.jpg"
+  },
+  {
+    "id": 4,
+    "estate_title": "Restaurant Space",
+    "segment_name": "Restaurant",
+    "description": "Turnkey restaurant space with fully equipped kitchen and dining area.",
+    "price": "8000/month",
+    "status": "rent",
+    "area": "3000",
+    "location": "Popular Dining District",
+    "facilities": ["Commercial Kitchen", "Outdoor Patio"],
+    "image": "https://i.ibb.co/f9MS6g7/04.jpg"
+  },
+  {
+    "id": 5,
+    "estate_title": "Entertainment Venue",
+    "segment_name": "Entertainment Venue",
+    "description": "Versatile space suitable for concerts, events, and performances.",
+    "price": "2000000/month",
+    "status": "sale",
+    "area": "15000",
+    "location": "Arts and Culture District",
+    "facilities": ["Stage", "Sound System"],
+    "image": "https://i.ibb.co/stWJjt6/05.jpg"
+  },
+  {
+    "id": 6,
+    "estate_title": "Large Warehouse Facility",
+    "segment_name": "Warehouse",
+    "description": "Spacious warehouse with multiple loading docks and storage capacity.",
+    "price": "3000000/month",
+    "status": "sale",
+    "area": "40000",
+    "location": "Industrial Park",
+    "facilities": ["Loading Docks", "High Ceilings"],
+    "image": "https://i.ibb.co/Bzx2y8x/06.jpg"
+  }
+]

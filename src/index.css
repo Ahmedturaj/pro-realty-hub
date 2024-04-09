@@ -9,3 +9,7 @@
 .font_Libre{
   font-family: "Libre Baskerville", serif;
 }
+
+body[data-aos-delay='5000'] [data-aos],[data-aos] [data-aos] [data-aos-delay='5000']{
+  transition-delay: 5000ms;
+}

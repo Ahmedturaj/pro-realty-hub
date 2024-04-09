@@ -5,6 +5,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { updateProfile } from "firebase/auth";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import PageTitle from "../../components/PageTitle/PageTitle";
 
 const Register = () => {
     const { signUp, setUser } = useContext(AuthContext);
@@ -56,6 +57,7 @@ const Register = () => {
     }
     return (
         <div className="w-4/6 mx-auto border mt-14 border-green-500 rounded-2xl bg-green-500">
+            <PageTitle title={'SignUp'}></PageTitle>
             <div className="w-full">
                 <h1 className="text-center text-3xl font-bold py-2">Please SignUp</h1>
                 <div className="card shrink-0 w-full p-4 bg-base-100 ">
