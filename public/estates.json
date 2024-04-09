@@ -1,74 +1,74 @@
 [
   {
     "id": 1,
-    "estate_title": "Modern Office Building",
+    "estate_title": "Contemporary Office Complex",
     "segment_name": "Office Building",
-    "description": "State-of-the-art office building with advanced facilities and amenities.",
-    "price": "5000000/month",
-    "status": "sale",
-    "area": "10000",
-    "location": "Downtown Business District",
+    "description": "Contemporary office complex with cutting-edge facilities and amenities.",
+    "price": "$6,000,000/month",
+    "status": "lease",
+    "area": "12,000",
+    "location": "Financial District",
     "facilities": ["Conference Rooms", "Fitness Center"],
-    "image": "https://i.ibb.co/vc4nF24/01.jpg"
+    "image": "https://i.ibb.co/PN5Q5zD/property-grid-1.png"
   },
   {
     "id": 2,
-    "estate_title": "Prime Retail Space",
+    "estate_title": "Premium Retail Outlet",
     "segment_name": "Retail Space",
-    "description": "High-visibility retail space in a bustling commercial area.",
-    "price": "10000/month",
+    "description": "Premium retail outlet located in a vibrant commercial hub.",
+    "price": "$12,000/month",
     "status": "rent",
-    "area": "2500",
-    "location": "Shopping Mall",
+    "area": "3,000",
+    "location": "Shopping Complex",
     "facilities": ["Storefront Windows", "Storage Area"],
-    "image": "https://i.ibb.co/KKKxMHN/02.jpg"
+    "image": "https://i.ibb.co/JQQmz1M/property-grid-2.png"
   },
   {
     "id": 3,
-    "estate_title": "Large-scale Industrial Facility",
+    "estate_title": "State-of-the-Art Industrial Complex",
     "segment_name": "Industrial Facility",
-    "description": "Industrial complex with manufacturing capabilities and ample storage space.",
-    "price": "12000000/month",
+    "description": "State-of-the-art industrial complex featuring advanced manufacturing capabilities and extensive storage space.",
+    "price": "$15,000,000/month",
     "status": "sale",
-    "area": "50000",
+    "area": "60,000",
     "location": "Industrial Zone",
     "facilities": ["Production Areas", "Loading Bays"],
-    "image": "https://i.ibb.co/x7dXcXq/03.jpg"
+    "image": "https://i.ibb.co/dgWssD0/property-grid-3.png"
   },
   {
     "id": 4,
-    "estate_title": "Restaurant Space",
+    "estate_title": "Dining Destination",
     "segment_name": "Restaurant",
-    "description": "Turnkey restaurant space with fully equipped kitchen and dining area.",
-    "price": "8000/month",
-    "status": "rent",
-    "area": "3000",
-    "location": "Popular Dining District",
+    "description": "Exciting dining destination with fully-equipped kitchen and charming outdoor dining area.",
+    "price": "$10,000/month",
+    "status": "lease",
+    "area": "4,000",
+    "location": "Culinary District",
     "facilities": ["Commercial Kitchen", "Outdoor Patio"],
-    "image": "https://i.ibb.co/f9MS6g7/04.jpg"
+    "image": "https://i.ibb.co/jk9Xcf2/property-grid-4.png"
   },
   {
     "id": 5,
-    "estate_title": "Entertainment Venue",
+    "estate_title": "Multifunctional Event Venue",
     "segment_name": "Entertainment Venue",
-    "description": "Versatile space suitable for concerts, events, and performances.",
-    "price": "2000000/month",
+    "description": "Versatile event venue suitable for various occasions including concerts, events, and performances.",
+    "price": "$3,000,000/month",
     "status": "sale",
-    "area": "15000",
+    "area": "20,000",
     "location": "Arts and Culture District",
     "facilities": ["Stage", "Sound System"],
-    "image": "https://i.ibb.co/stWJjt6/05.jpg"
+    "image": "https://i.ibb.co/PN5Q5zD/property-grid-1.png"
   },
   {
     "id": 6,
-    "estate_title": "Large Warehouse Facility",
+    "estate_title": "Spacious Warehousing Facility",
     "segment_name": "Warehouse",
-    "description": "Spacious warehouse with multiple loading docks and storage capacity.",
-    "price": "3000000/month",
+    "description": "Spacious warehousing facility equipped with multiple loading docks and high ceilings.",
+    "price": "$5,000,000/month",
     "status": "sale",
-    "area": "40000",
+    "area": "50,000",
     "location": "Industrial Park",
     "facilities": ["Loading Docks", "High Ceilings"],
-    "image": "https://i.ibb.co/Bzx2y8x/06.jpg"
+    "image": "https://i.ibb.co/fvvqCgP/property-grid-2.png"
   }
 ]

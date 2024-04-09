@@ -1,11 +1,13 @@
 
 import PropTypes from 'prop-types';
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 const PageTitle = ({ title }) => {
     return (
-        <Helmet>
-            <title>ProRealtyHub | {title}</title>
-        </Helmet>
+        <HelmetProvider>
+            <Helmet>
+                <title>ProRealtyHub | {title}</title>
+            </Helmet>
+        </HelmetProvider>
     );
 };
 

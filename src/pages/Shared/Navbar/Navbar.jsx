@@ -42,9 +42,9 @@ const Navbar = () => {
                 }
                 {
                     user ? <>
-                        <button onClick={logOut} className="btn text-base md:text-xl bg-[hsl(112,43%,55%)]">LogOut</button>
+                        <button onClick={logOut} className="btn text-[#f2f2f2f2] text-base md:text-xl bg-[hsl(112,43%,55%)] hover:bg-[hsl(112,43%,55%)]">LogOut</button>
                     </> :
-                        <Link to={'/signIn'}>  <button className="btn text-base md:text-xl bg-[hsl(112,43%,55%)]">Login</button></Link>
+                        <Link to={'/signIn'}>  <button className="btn text-[#f2f2f2f2] text-base md:text-xl bg-[hsl(112,43%,55%)] hover:bg-[hsl(112,43%,55%)]">Login</button></Link>
                 }
             </div>
         </div>

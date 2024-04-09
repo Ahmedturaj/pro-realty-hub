@@ -2,8 +2,6 @@ import { createContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
 import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import auth from "../../Firebase/Firebase.config.init";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 export const AuthContext = createContext(null)
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
@@ -30,7 +28,6 @@ const gitHubLogIn =()=>{
         setLoading(true)
         return (signOut(auth)
             .then(() => {
-                toast.success('SignOut successfully.');
                 setUser(null);
             })
             .catch(error => {
@@ -49,7 +46,7 @@ const gitHubLogIn =()=>{
             unSubscribe();
         }
 
-    }, [])
+    }, [user])
     const authInfo = {
         user,
 
@@ -66,7 +63,6 @@ const gitHubLogIn =()=>{
             <AuthContext.Provider value={authInfo}>
                 {children}
             </AuthContext.Provider>
-            <ToastContainer></ToastContainer>
         </div>
     );
 };
