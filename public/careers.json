@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Senior Software Engineer",
+    "short_description": "Join our dynamic team as a Senior Software Engineer and help drive innovation in our technology stack.",
+    "full_or_part_time": "Full Time",
+    "starting_salary": "70,000",
+    "image": "https://i.ibb.co/ZMvLch9/01.webp"
+  },
+  {
+    "id": 2,
+    "title": "Marketing Manager",
+    "short_description": "We're seeking a Marketing Manager to lead our strategic marketing initiatives and drive brand growth.",
+    "full_or_part_time": "Full Time",
+    "starting_salary": "60,000",
+    "image": "https://i.ibb.co/F50ZNXT/02.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Customer Service Representative",
+    "short_description": "Join our customer service team and provide exceptional support to our clients across all communication channels.",
+    "full_or_part_time": "Part Time",
+    "starting_salary": "30,000",
+    "image": "https://i.ibb.co/5RKf1CW/03.png"
+  },
+  {
+    "id": 4,
+    "title": "Sales Associate",
+    "short_description": "Seeking motivated Sales Associates to promote our commercial properties and drive revenue growth.",
+    "full_or_part_time": "Full Time",
+    "starting_salary": "40,000",
+    "image": "https://i.ibb.co/2MyMTCg/04.webp"
+  }
+]

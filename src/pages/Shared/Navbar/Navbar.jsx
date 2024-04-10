@@ -8,7 +8,9 @@ const Navbar = () => {
     const navLink = <>
         <li><NavLink to={'/'} className={({ isActive }) => isActive ? 'text-[hsl(112,43%,55%)] border border-[hsl(112,43%,55%)] font-bold  p-2 rounded-md text-xl' : 'text-white text-xl'}>Home</NavLink></li>
         <li><NavLink to={'/update'} className={({ isActive }) => isActive ? 'text-[hsl(112,43%,55%)] border border-[hsl(112,43%,55%)] font-bold  p-2 rounded-md text-xl' : 'text-white text-xl'}>Update Profile</NavLink></li>
-        <li><NavLink to={'/contact'} className={({ isActive }) => isActive ? 'text-[hsl(112,43%,55%)] border border-[hsl(112,43%,55%)] font-bold  p-2 rounded-md text-xl' : 'text-white text-xl'}>Contact</NavLink></li>
+        {
+            user && <li><NavLink to={'/careers'} className={({ isActive }) => isActive ? 'text-[hsl(112,43%,55%)] border border-[hsl(112,43%,55%)] font-bold  p-2 rounded-md text-xl' : 'text-white text-xl'}>Career</NavLink></li>
+        }
 
     </>
     return (
@@ -34,11 +36,11 @@ const Navbar = () => {
             <div className="navbar-end">
                 {
                     user &&
-                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar mr-5">
-                            <div className="w-10 rounded-full">
-                                <img alt={`picture of ${user.displayName}`} src={user.photoURL?user.photoURL:'https://i.ibb.co/Y36ZBDD/blank-avatar-photo-place-holder-600nw-1095249842.jpg'} title={user.displayName} />
-                            </div>
-                        </div> 
+                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar mr-5">
+                        <div className="w-10 rounded-full">
+                            <img alt={`picture of ${user.displayName}`} src={user.photoURL ? user.photoURL : 'https://i.ibb.co/Y36ZBDD/blank-avatar-photo-place-holder-600nw-1095249842.jpg'} title={user.displayName} />
+                        </div>
+                    </div>
                 }
                 {
                     user ? <>

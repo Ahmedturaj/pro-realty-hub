@@ -88,7 +88,7 @@ const SignIn = () => {
                             </label>
                             <input type="password" placeholder="password" name="password" className="input input-bordered border-2 border-green-500 border-dotted" required />
                             <label className="label mt-10">
-                                <Link to={'/register'} className="label-text-alt link link-hover text-blue-600">Have no account ? Create Account please</Link>
+                                <Link to={'/register'} className="label-text-alt link link-hover text-green-500">Have no account ? Create Account please</Link>
                             </label>
                         </div>
                         <div className="form-control mt-6 gap-5">

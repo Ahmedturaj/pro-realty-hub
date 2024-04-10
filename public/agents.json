@@ -1,25 +1,25 @@
 [
   {
     "id": 1,
-    "image": "https://i.ibb.co/JH5Bgks/01.jpg",
-    "name": "John M. Riddle",
+    "image": "https://i.ibb.co/h24q4hY/member-4.png",
+    "name": "Maria Dicuza",
     "designation": "Senior Commercial Estate Agent"
   },
   {
     "id": 2,
-    "image": "https://i.ibb.co/JyrZQhw/02.jpg",
-    "name": "Sophia Patel",
+    "image": "https://i.ibb.co/G0DqzWL/member-5.png",
+    "name": "Sohan Patel",
     "designation": "Commercial Property Manager"
   },
   {
     "id": 3,
-    "image": "https://i.ibb.co/bQLwWJ0/03.jpg",
+    "image": "https://i.ibb.co/vH8ypQx/member-6.png",
     "name": "James Richardson",
     "designation": "Commercial Real Estate Broker"
   },
   {
     "id": 4,
-    "image": "https://i.ibb.co/tYxzsfW/04.jpg",
+    "image": "https://i.ibb.co/J3GRVJm/member-1.png",
     "name": "Luann Johnson",
     "designation": "Commercial Leasing Specialist"
   }

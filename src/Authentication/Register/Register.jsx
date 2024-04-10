@@ -94,14 +94,16 @@ const Register = () => {
                                 name="password"
                                 className="input input-bordered border-2 border-green-500 border-dotted" required />
                             <span onClick={() => setShowPassword(!showPassword)} className="flex justify-end items-center relative bottom-8 mr-5 cursor-pointer  w-8 md:w-11 
-                               left-24 md:left-80 lg:left-[670px]">{showPassword ? <FaEyeSlash /> : <FaEye></FaEye>}</span>
+                               left-24 md:left-80 lg:left-[670px] text-green-500">{showPassword ? <FaEyeSlash /> : <FaEye></FaEye>}</span>
                             <label className="label">
                                 <span className="label-text">Confirm Password</span>
                             </label>
                             <input type="password" placeholder="Confirm password"
                                 name="confirmPassword" className="input input-bordered border-2 border-green-500 border-dotted" required />
+                            <span onClick={() => setShowPassword(!showPassword)} className="flex justify-end items-center relative bottom-8 mr-5 cursor-pointer  w-8 md:w-11 
+                               left-24 md:left-80 lg:left-[670px] text-green-500">{showPassword ? <FaEyeSlash /> : <FaEye></FaEye>}</span>
                             <label className="label mt-10">
-                                <Link to={'/signIn'} className="label-text-alt link link-hover text-blue-600">Already Have an account</Link>
+                                <Link to={'/signIn'} className="label-text-alt link link-hover text-green-500">Already Have an account</Link>
                             </label>
                         </div>
                         <div className="form-control mt-6">
