@@ -15,11 +15,13 @@ import SignIn from './Authentication/SignIn/SignIn';
 import Register from './Authentication/Register/Register';
 import PrivateRoutes from './components/PrivateRoutes/PrivateRoutes';
 import EstateDetails from './pages/Home/Estate/EstateDetails';
+import ErrorPage from './pages/ErrorPage/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
@@ -27,7 +29,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/estate/:id',
-        element:<EstateDetails></EstateDetails>,
+        element:<PrivateRoutes><EstateDetails></EstateDetails></PrivateRoutes>,
         loader:()=>fetch('/estates.json')
       }
       ,

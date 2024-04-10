@@ -20,11 +20,17 @@ const SignIn = () => {
                 setUser(result.user)
                 navigate(location?.state ? location.state : '/')
                 toast.success('logIn Successfully')
+                e.target.reset();
             })
             .catch(error => {
-                toast.warning(error.message)
+                const errorMessage = error.message
+                    .split("/")[1]
+                    .replace(/\)\./g, "")
+                    .replace(/-/g, " ")
+                    .replace(/\b\w/g, (char) => char.toUpperCase());
+                toast.error(errorMessage);
             })
-        e.target.reset();
+        
     }
     const handleGoogle = e => {
         e.preventDefault();
@@ -33,23 +39,35 @@ const SignIn = () => {
                 setUser(result.user);
                 toast.success('You have Log In Via Google successfully')
                 navigate(location?.state ? location.state : '/')
+                e.target.reset();
             })
             .catch(error => {
-                toast.warning(error.message);
+                const errorMessage = error.message
+                    .split("/")[1]
+                    .replace(/\)\./g, "")
+                    .replace(/-/g, " ")
+                    .replace(/\b\w/g, (char) => char.toUpperCase());
+                toast.error(errorMessage);
             })
     }
 
     const handleGitHub = e => {
         e.preventDefault()
         gitHubLogIn()
-        .then((result)=>{
-            setUser(result.user);
-            toast.success('You have Log In Via GitHub successfully')
-            navigate(location?.state ? location.state : '/')
-        })
-        .catch(error => {
-            toast.warning(error.message);
-        })
+            .then((result) => {
+                setUser(result.user);
+                toast.success('You have Log In Via GitHub successfully')
+                navigate(location?.state ? location.state : '/')
+                e.target.reset();
+            })
+            .catch(error => {
+                const errorMessage = error.message
+                    .split("/")[1]
+                    .replace(/\)\./g, "")
+                    .replace(/-/g, " ")
+                    .replace(/\b\w/g, (char) => char.toUpperCase());
+                toast.error(errorMessage);
+            })
     }
     return (
         <div className="w-4/6 mx-auto border mt-14 border-green-500 rounded-2xl bg-green-500 mb-5 shadow-green-200 shadow-lg">
