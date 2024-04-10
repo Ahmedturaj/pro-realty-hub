@@ -4,19 +4,19 @@
     "estate_title": "Contemporary Office Complex",
     "segment_name": "Office Building",
     "description": "Contemporary office complex with cutting-edge facilities and amenities.",
-    "price": "$6,000,000/month",
+    "price": "6,000,000/month",
     "status": "lease",
     "area": "12,000",
     "location": "Financial District",
     "facilities": ["Conference Rooms", "Fitness Center"],
-    "image": "https://i.ibb.co/PN5Q5zD/property-grid-1.png"
+    "image": "https://i.ibb.co/sb2PYQ3/2.png"
   },
   {
     "id": 2,
     "estate_title": "Premium Retail Outlet",
     "segment_name": "Retail Space",
     "description": "Premium retail outlet located in a vibrant commercial hub.",
-    "price": "$12,000/month",
+    "price": "12,000/month",
     "status": "rent",
     "area": "3,000",
     "location": "Shopping Complex",
@@ -26,9 +26,9 @@
   {
     "id": 3,
     "estate_title": "State-of-the-Art Industrial Complex",
-    "segment_name": "Industrial Facility",
+    "segment_name": "Living House",
     "description": "State-of-the-art industrial complex featuring advanced manufacturing capabilities and extensive storage space.",
-    "price": "$15,000,000/month",
+    "price": "15,000,000/month",
     "status": "sale",
     "area": "60,000",
     "location": "Industrial Zone",
@@ -38,9 +38,9 @@
   {
     "id": 4,
     "estate_title": "Dining Destination",
-    "segment_name": "Restaurant",
+    "segment_name": "Apartment",
     "description": "Exciting dining destination with fully-equipped kitchen and charming outdoor dining area.",
-    "price": "$10,000/month",
+    "price": "10,000/month",
     "status": "lease",
     "area": "4,000",
     "location": "Culinary District",
@@ -52,7 +52,7 @@
     "estate_title": "Multifunctional Event Venue",
     "segment_name": "Entertainment Venue",
     "description": "Versatile event venue suitable for various occasions including concerts, events, and performances.",
-    "price": "$3,000,000/month",
+    "price": "3,000,000/month",
     "status": "sale",
     "area": "20,000",
     "location": "Arts and Culture District",
@@ -64,11 +64,11 @@
     "estate_title": "Spacious Warehousing Facility",
     "segment_name": "Warehouse",
     "description": "Spacious warehousing facility equipped with multiple loading docks and high ceilings.",
-    "price": "$5,000,000/month",
+    "price": "5,000,000/month",
     "status": "sale",
     "area": "50,000",
     "location": "Industrial Park",
     "facilities": ["Loading Docks", "High Ceilings"],
-    "image": "https://i.ibb.co/fvvqCgP/property-grid-2.png"
+    "image": "https://i.ibb.co/tD8rXpz/1.png"
   }
 ]
