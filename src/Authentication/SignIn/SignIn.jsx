@@ -55,12 +55,13 @@ const SignIn = () => {
         e.preventDefault()
         gitHubLogIn()
             .then((result) => {
+                console.log(result.user);
                 setUser(result.user);
                 toast.success(`${user && user.displayName},You have Log In Via GitHub successfully`)
                 navigate(location?.state ? location.state : '/')
                 e.target.reset();
             })
-            .catch(error => {
+            .catch((error) => {
                 const errorMessage = error.message
                     .split("/")[1]
                     .replace(/\)\./g, "")
