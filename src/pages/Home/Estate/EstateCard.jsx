@@ -5,10 +5,15 @@ import { FaLightbulb } from "react-icons/fa6";
 import { FaCheckDouble } from "react-icons/fa6";
 import { CiBadgeDollar } from "react-icons/ci";
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css'
+AOS.init();
 const EstateCard = ({ estate }) => {
-    const { id,image, estate_title, status, segment_name, price, area, location, facilities } = estate;
+    const { id,image, estate_title, status, segment_name, price, area, location, facilities ,animation,
+    offset,
+    duration,delay} = estate;
     return (
-        <div className="card  bg-white border-green-500 border-b-2 border-l-2 border-r-2 border-opacity-40 shadow-green-200 shadow-lg">
+        <div data-aos={animation} data-aos-offset={offset} data-aos-delay={delay} data-aos-duration={duration} className="card  bg-white border-green-500 border-b-2 border-l-2 border-r-2 border-opacity-40 shadow-green-200 shadow-lg">
             <figure><img src={image} alt={`Picture of ${estate_title}`} className='hover:scale-105 relative' style={{ transition: 'all 1s' }} />
                 <div className="badge bg-green-500 text-white absolute z-10 top-3 left-3">{segment_name}</div>
             </figure>

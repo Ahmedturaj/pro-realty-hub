@@ -32,14 +32,14 @@ const Mission = () => {
                     <div className="">
                         <p data-aos="fade-right"
                             data-aos-offset="300"
-                            data-aos-duration='500'
+                            data-aos-duration='200'
                             data-aos-easing="ease-in-sine"
                         >OWNED FORM</p>
                         <p data-aos="fade-right"
                         data-aos-offset="300"
                         data-aos-easing="ease-in-sine"
-                        data-aos-duration='500'
-                        data-aos-delay='500'>PROPERTIES TRANSACTIONS</p>
+                        data-aos-duration='200'
+                        data-aos-delay='200'>PROPERTIES TRANSACTIONS</p>
                     </div>
                 </div>
                 <div className="flex gap-2 justify-center items-center">
@@ -47,13 +47,13 @@ const Mission = () => {
                     <div className="">
                         <p data-aos="fade-right"
                             data-aos-offset="300"
-                            data-aos-duration='500'
+                            data-aos-duration='200'
                             data-aos-easing="ease-in-sine">Members FORM</p>
                         <p data-aos="fade-right"
                         data-aos-offset="300"
                         data-aos-easing="ease-in-sine"
-                        data-aos-duration='500'
-                        data-aos-delay='500'>PROPERTIES TRANSACTIONS</p>
+                        data-aos-duration='200'
+                        data-aos-delay='200'>PROPERTIES TRANSACTIONS</p>
                     </div>
                 </div>
                 <div className="flex gap-2 justify-center items-center">
@@ -61,13 +61,13 @@ const Mission = () => {
                     <div className="">
                         <p data-aos="fade-right"
                         data-aos-offset="300"
-                        data-aos-duration='500'
+                        data-aos-duration='200'
                         data-aos-easing="ease-in-sine" >Company FORM</p>
                         <p data-aos="fade-right"
                         data-aos-offset="300"
-                        data-aos-duration='500'
+                        data-aos-duration='200'
                         data-aos-easing="ease-in-sine"
-                        data-aos-delay='500'>PROPERTIES TRANSACTIONS</p>
+                        data-aos-delay='200'>PROPERTIES TRANSACTIONS</p>
                     </div>
                 </div>
             </div>

@@ -11,7 +11,8 @@ const Agent = () => {
         loader();
     }, [])
     return (
-        <div className="w-11/12 mx-auto">
+        <div className="w-11/12 mx-auto mt-20">
+            <div className="">
             <div data-aos="fade-right"
                 data-aos-offset="300"
                 data-aos-easing="ease-in-sine"
@@ -26,13 +27,14 @@ const Agent = () => {
             </div>
 
 
-            <div className="my-10 grid grid-cols-4 md:grid-cols-2 gap-6">
+            <div className="my-10 grid grid-cols-1 lg:grid-cols-2 gap-6">
 
                 {
                     agents.map(agent =><AgentCard key={agent.id} agent={agent}></AgentCard> )
                 }
             </div>
 
+        </div>
         </div>
     );
 };

@@ -8,8 +8,15 @@
     "status": "lease",
     "area": "12,000",
     "location": "Financial District",
-    "facilities": ["Conference Rooms", "Fitness Center"],
-    "image": "https://i.ibb.co/sb2PYQ3/2.png"
+    "facilities": [
+      "Conference Rooms",
+      "Fitness Center"
+    ],
+    "image": "https://i.ibb.co/sb2PYQ3/2.png",
+    "animation": "fade-up",
+    "offset": "500",
+    "duration": "1000",
+    "delay":"300"
   },
   {
     "id": 2,
@@ -20,8 +27,14 @@
     "status": "rent",
     "area": "3,000",
     "location": "Shopping Complex",
-    "facilities": ["Storefront Windows", "Storage Area"],
-    "image": "https://i.ibb.co/JQQmz1M/property-grid-2.png"
+    "facilities": [
+      "Storefront Windows",
+      "Storage Area"
+    ],
+    "image": "https://i.ibb.co/JQQmz1M/property-grid-2.png",
+    "animation": "zoom-in-down",
+    "offset": "500",
+    "duration": "600"
   },
   {
     "id": 3,
@@ -32,8 +45,15 @@
     "status": "sale",
     "area": "60,000",
     "location": "Industrial Zone",
-    "facilities": ["Production Areas", "Loading Bays"],
-    "image": "https://i.ibb.co/dgWssD0/property-grid-3.png"
+    "facilities": [
+      "Production Areas",
+      "Loading Bays"
+    ],
+    "image": "https://i.ibb.co/dgWssD0/property-grid-3.png",
+    "animation": "fade-down",
+    "offset": "500",
+    "duration": "1000",
+    "delay":"300"
   },
   {
     "id": 4,
@@ -44,8 +64,15 @@
     "status": "lease",
     "area": "4,000",
     "location": "Culinary District",
-    "facilities": ["Commercial Kitchen", "Outdoor Patio"],
-    "image": "https://i.ibb.co/jk9Xcf2/property-grid-4.png"
+    "facilities": [
+      "Commercial Kitchen",
+      "Outdoor Patio"
+    ],
+    "image": "https://i.ibb.co/jk9Xcf2/property-grid-4.png",
+    "animation": "fade-up",
+    "offset": "500",
+    "duration": "1000",
+    "delay":"300"
   },
   {
     "id": 5,
@@ -56,8 +83,14 @@
     "status": "sale",
     "area": "20,000",
     "location": "Arts and Culture District",
-    "facilities": ["Stage", "Sound System"],
-    "image": "https://i.ibb.co/PN5Q5zD/property-grid-1.png"
+    "facilities": [
+      "Stage",
+      "Sound System"
+    ],
+    "image": "https://i.ibb.co/PN5Q5zD/property-grid-1.png",
+    "animation": "zoom-in-down",
+    "offset": "500",
+    "duration": "600"
   },
   {
     "id": 6,
@@ -68,7 +101,14 @@
     "status": "sale",
     "area": "50,000",
     "location": "Industrial Park",
-    "facilities": ["Loading Docks", "High Ceilings"],
-    "image": "https://i.ibb.co/tD8rXpz/1.png"
+    "facilities": [
+      "Loading Docks",
+      "High Ceilings"
+    ],
+    "image": "https://i.ibb.co/tD8rXpz/1.png",
+    "animation": "fade-down",
+    "offset": "500",
+    "duration": "1000",
+    "delay":"300"
   }
 ]

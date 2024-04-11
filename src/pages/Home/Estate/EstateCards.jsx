@@ -14,7 +14,7 @@ const EstateCards = () => {
         loader()
     }, [])
     return (
-        <div className="my-12 px-4">
+        <div className="my-8 px-4">
             <div data-aos="fade-right"
                     data-aos-offset="300"
                     data-aos-easing="ease-in-sine"
@@ -25,7 +25,7 @@ const EstateCards = () => {
                     data-aos-duration='500'
                     data-aos-delay='500'
                     className="text-3xl p-4 border-opacity-40 rounded-md border-l border-green-600 border-b-2
-            ">Recent Properties{estates.length}</h2>
+            ">Recent Properties</h2>
             </div>
             <div className="mt-14 lg:w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5">
                 {

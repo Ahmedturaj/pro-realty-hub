@@ -7,7 +7,7 @@ import { TfiGithub } from "react-icons/tfi";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const SignIn = () => {
-    const { logIn, setUser, googleLogIn, gitHubLogIn } = useContext(AuthContext);
+    const { logIn, setUser, googleLogIn, gitHubLogIn, user } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
     const handleLogIn = (e) => {
@@ -18,8 +18,8 @@ const SignIn = () => {
         logIn(email, password)
             .then((result) => {
                 setUser(result.user)
+                toast.success(`${user && user.displayName} , you have logged In Successfully`)
                 navigate(location?.state ? location.state : '/')
-                toast.success('logIn Successfully')
                 e.target.reset();
             })
             .catch(error => {
@@ -30,14 +30,14 @@ const SignIn = () => {
                     .replace(/\b\w/g, (char) => char.toUpperCase());
                 toast.error(errorMessage);
             })
-        
+
     }
     const handleGoogle = e => {
         e.preventDefault();
         googleLogIn()
             .then((result) => {
                 setUser(result.user);
-                toast.success('You have Log In Via Google successfully')
+                toast.success(`${user && user.displayName}, You have Log In Via Google successfully`)
                 navigate(location?.state ? location.state : '/')
                 e.target.reset();
             })
@@ -56,7 +56,7 @@ const SignIn = () => {
         gitHubLogIn()
             .then((result) => {
                 setUser(result.user);
-                toast.success('You have Log In Via GitHub successfully')
+                toast.success(`${user && user.displayName},You have Log In Via GitHub successfully`)
                 navigate(location?.state ? location.state : '/')
                 e.target.reset();
             })

@@ -40,7 +40,7 @@ const UpdateProfile = () => {
                 <div className="card shrink-0 w-full p-4 bg-base-100">
                     <div className="flex items-center justify-center gap-4">
                         <img className="rounded-full animate__animated animate__fadeIn animate__zoomIn animate__slow	2s" src={user && user.photoURL} alt="" />
-                        <p className="animate__animated animate__bounce animate__lightSpeedInLeft animate__delay-2s animate__slow	2s">{user && user.displayName}</p>
+                        <p className="animate__animated animate__bounce animate__lightSpeedInLeft animate__delay-1s animate__slow	2s">{user && user.displayName}</p>
                     </div>
                     <form onSubmit={handleUpdateProfile} className="card-body w-full">
                         <div className="form-control">
