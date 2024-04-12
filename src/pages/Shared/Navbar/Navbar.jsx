@@ -24,8 +24,8 @@ const Navbar = () => {
                         {navLink}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-white md:text-xl text-xs gap-0"><span className="md:text-4xl text-xl text-[hsl(112,43%,55%)]"><MdRealEstateAgent /></span><span className="text-xl md:text-2xl  text-[hsl(112,43%,55%)] p-0">
-                    P</span>ro<span className="text-xl md:text-2xl  text-[hsl(112,43%,55%)] p-0">R</span>ealty<span className="text-base md:text-2xl  text-[hsl(112,43%,55%)] p-0">Hub</span></a>
+                <Link to={'/'} className="btn btn-ghost text-white md:text-xl text-xs gap-0"><span className="md:text-4xl text-xl text-[hsl(112,43%,55%)]"><MdRealEstateAgent /></span><span className="text-xl md:text-2xl  text-[hsl(112,43%,55%)] p-0">
+                    P</span>ro<span className="text-xl md:text-2xl  text-[hsl(112,43%,55%)] p-0">R</span>ealty<span className="text-base md:text-2xl  text-[hsl(112,43%,55%)] p-0">Hub</span></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
