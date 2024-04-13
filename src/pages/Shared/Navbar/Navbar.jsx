@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { MdRealEstateAgent } from "react-icons/md";
 import { AuthContext } from "../../../Provider/AuthProvider/AuthProvider";
-
+import './nav.css'
 const Navbar = () => {
     const { user, logOut, loading } = useContext(AuthContext);
     const navLink = <>

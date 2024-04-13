@@ -6,7 +6,7 @@ AOS.init();
 const Mission = () => {
     return (
         <div >
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-4 gap-4 my-14 justify-center items-center">
+            <div className="grid grid-cols-1  lg:grid-cols-3 p-4 gap-4 my-14 justify-center items-center">
                 <div className="gap-0 md:text-justify text-center">
                     <p className="font-bold text-4xl md:text-4xl lg:text-5xl  ">Our mission is to</p>
                     <p  className="font-bold text-4xl md:text-4xl lg:text-5xl ">redefine real</p>
@@ -14,8 +14,8 @@ const Mission = () => {
                     <p  className="font-bold text-4xl md:text-4xl lg:text-4xl  ">customers</p>
                 </div>
                 <div className="">
-                    <p className='md:text-xl'>Finderland is one of the worlds leading property agents. Our experience spans the globe.</p>
-                    <p className='md:text-xl'>We have been advising on buying, selling and renting property for over 160 years, from country cottages to city centre offices, agricultural land to new-build developments.</p>
+                    <p className='md:text-lg'>Finderland is one of the worlds leading property agents. Our experience spans the globe.</p>
+                    <p className='md:text-lg'>We have been advising on buying, selling and renting property for over 160 years, from country cottages to city centre offices, agricultural land to new-build developments.</p>
                 </div>
                 <div className="text-justify ">
 

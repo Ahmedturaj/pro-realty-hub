@@ -27,7 +27,7 @@ const Agent = () => {
             </div>
 
 
-            <div className="my-10 grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="my-10 grid grid-cols-1 justify-items-center lg:grid-cols-2 gap-5">
 
                 {
                     agents.map(agent =><AgentCard key={agent.id} agent={agent}></AgentCard> )
