@@ -4,7 +4,7 @@ import { MdRealEstateAgent } from "react-icons/md";
 import { AuthContext } from "../../../Provider/AuthProvider/AuthProvider";
 
 const Navbar = () => {
-    const { user, logOut } = useContext(AuthContext);
+    const { user, logOut, loading } = useContext(AuthContext);
     const navLink = <>
         <li><NavLink to={'/'} className={({ isActive }) => isActive ? 'text-[hsl(112,43%,55%)] border border-[hsl(112,43%,55%)] font-bold  p-2 rounded-md text-xl' : 'text-white text-xl'}>Home</NavLink></li>
         <li><NavLink to={'/update'} className={({ isActive }) => isActive ? 'text-[hsl(112,43%,55%)] border border-[hsl(112,43%,55%)] font-bold  p-2 rounded-md text-xl' : 'text-white text-xl'}>Update Profile</NavLink></li>
@@ -34,20 +34,22 @@ const Navbar = () => {
             </div>
 
             <div className="navbar-end">
-                {
-                    user &&
-                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar mr-5">
-                        <div className="w-10 rounded-full">
-                            <img alt={`picture of ${user.displayName}`} src={user.photoURL ? user.photoURL : 'https://i.ibb.co/Y36ZBDD/blank-avatar-photo-place-holder-600nw-1095249842.jpg'} title={user.displayName} />
+                {loading?<progress className="progress w-40 md:w-56 bg-[hsl(112,43%,55%)]"></progress>:<div className="flex items-center">
+                    {
+                        user &&
+                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar mr-5">
+                            <div className="w-10 rounded-full">
+                                <img alt={`picture of ${user.displayName}`} src={user.photoURL ? user.photoURL : 'https://i.ibb.co/Y36ZBDD/blank-avatar-photo-place-holder-600nw-1095249842.jpg'} title={user.displayName} />
+                            </div>
                         </div>
-                    </div>
-                }
-                {
-                    user ? <>
-                        <button onClick={logOut} className="btn text-[#f2f2f2f2] text-base md:text-xl bg-[hsl(112,43%,55%)] hover:bg-[hsl(112,43%,55%)]">LogOut</button>
-                    </> :
-                        <Link to={'/signIn'}>  <button className="btn text-[#f2f2f2f2] text-base md:text-xl bg-[hsl(112,43%,55%)] hover:bg-[hsl(112,43%,55%)]">Login</button></Link>
-                }
+                    }
+                    {
+                        user ? <>
+                            <button onClick={logOut} className="btn text-[#f2f2f2f2] text-base md:text-xl bg-[hsl(112,43%,55%)] hover:bg-[hsl(112,43%,55%)]">LogOut</button>
+                        </> :
+                            <Link to={'/signIn'}>  <button className="btn text-[#f2f2f2f2] text-base md:text-xl bg-[hsl(112,43%,55%)] hover:bg-[hsl(112,43%,55%)]">Login</button></Link>
+                    }
+                </div>}
             </div>
         </div>
     );
