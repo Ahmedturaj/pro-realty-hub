@@ -39,16 +39,14 @@ const SignIn = () => {
                 setUser(result.user);
                 toast.success(`${user && user.displayName}, You have Log In Via Google successfully`)
                 navigate(location?.state ? location.state : '/')
-                e.target.reset();
+               
             })
             .catch(error => {
+                console.log(error.message);
                 const errorMessage = error.message
-                    .split("/")[1]
-                    .replace(/\)\./g, "")
-                    .replace(/-/g, " ")
-                    .replace(/\b\w/g, (char) => char.toUpperCase());
                 toast.error(errorMessage);
             })
+
     }
 
     const handleGitHub = e => {
@@ -59,14 +57,9 @@ const SignIn = () => {
                 setUser(result.user);
                 toast.success(`${user && user.displayName},You have Log In Via GitHub successfully`)
                 navigate(location?.state ? location.state : '/')
-                e.target.reset();
             })
             .catch((error) => {
                 const errorMessage = error.message
-                    .split("/")[1]
-                    .replace(/\)\./g, "")
-                    .replace(/-/g, " ")
-                    .replace(/\b\w/g, (char) => char.toUpperCase());
                 toast.error(errorMessage);
             })
     }
